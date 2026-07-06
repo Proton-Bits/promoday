@@ -57,9 +57,16 @@ body {
 /* ===== HERO ===== */
 .hero {
   background: var(--black);
-  padding: 40px 40px 80px;
   position: relative;
   overflow: hidden;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
 }
 
 .hero::before {
@@ -73,12 +80,15 @@ body {
 }
 
 .hero-inner {
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 56px;
+
   position: relative;
   z-index: 1;
 }
@@ -486,44 +496,68 @@ body {
 .foot-brand span { color: var(--gold); }
 .footer p { font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 5px; line-height: 1.6; }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 860px) {
-  .hero        { padding: 60px 24px 72px; }
-  .hero::before {
-    background: radial-gradient(ellipse 90% 45% at 50% 18%, rgba(245,196,0,0.20) 0%, transparent 60%);
+@media (max-width:860px){
+
+  .hero{
+      min-height:100svh;
+      padding:20px;
   }
-  .p:nth-child(1) { left: 25%; }
-  .p:nth-child(2) { left: 40%; }
-  .p:nth-child(3) { left: 55%; }
-  .p:nth-child(4) { left: 70%; }
-  .p:nth-child(5) { left: 30%; }
-  .p:nth-child(6) { left: 60%; }
-  .p:nth-child(7) { left: 45%; }
-  .hero-inner  { flex-direction: column-reverse; text-align: center; gap: 40px; }
-  .hero-text   { max-width: 100%; }
-  .hero-visual { flex: none; }
-  .hero-mascot { width: 220px; height: 220px; }
-  .proof       { justify-content: center; }
 
-  .container,
-  .pain-section,
-  .features-section,
-  .how-section,
-  .cta-section,
-  .footer { padding-left: 24px; padding-right: 24px; }
-
-  .pain-grid,
-  .features-grid,
-  .steps-grid { grid-template-columns: 1fr; }
-
-  .pain-card {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+  .hero::before{
+      background:
+      radial-gradient(
+          ellipse 90% 45% at 50% 18%,
+          rgba(245,196,0,.20) 0%,
+          transparent 60%
+      );
   }
-  .pain-card:last-child { border-bottom: none; }
 
-  .pain-section,
-  .features-section,
-  .how-section,
-  .cta-section { padding-top: 72px; padding-bottom: 72px; }
+  .hero-inner{
+      height:100%;
+      flex-direction:column-reverse;
+      justify-content:center;
+      align-items:center;
+      gap:20px;
+      text-align:center;
+  }
+
+  .hero-text{
+      max-width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+  }
+
+  .hero h1{
+      font-size:34px;
+      line-height:1.05;
+  }
+
+  .hero-sub{
+      font-size:16px;
+      max-width:360px;
+  }
+
+  .hero-mascot{
+      width:min(68vw,260px);
+      height:auto;
+  }
+
+  .btn-primary{
+      width:100%;
+      max-width:360px;
+      text-align:center;
+  }
+
+  .proof{
+      justify-content:center;
+  }
+
+  .p:nth-child(1){left:25%;}
+  .p:nth-child(2){left:40%;}
+  .p:nth-child(3){left:55%;}
+  .p:nth-child(4){left:70%;}
+  .p:nth-child(5){left:30%;}
+  .p:nth-child(6){left:60%;}
+  .p:nth-child(7){left:45%;}
 }

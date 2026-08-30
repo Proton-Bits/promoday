@@ -25,6 +25,7 @@ export type SiteConfig = {
   accent: string;
   metaPixelId: string;
   footerTagline: string;
+  trackingGroup?: "grupo_18_31" | "grupo_31_50" | "grupo_50_plus" | "achadinhos";
 };
 
 export const sites = {
@@ -48,6 +49,7 @@ export const sites = {
     accent: "#F5C400",
     metaPixelId: "1323630969748944",
     footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
+    trackingGroup: "grupo_18_31",
   },
   "perfumes-2": {
     slug: "perfumes-2",
@@ -71,6 +73,31 @@ export const sites = {
     accent: "#F5C400",
     metaPixelId: "1323630969748944",
     footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
+    trackingGroup: "grupo_31_50",
+  },
+  "perfumes-3": {
+    slug: "perfumes-3",
+    pageTitle: "PromoZap Perfumes",
+    brandName: "PromoZap Perfumes",
+    logoSrc: "/logo-perfume.png",
+    logoAlt: "PromoZap Perfumes",
+    headline: {
+      top: "Chega de pagar caro",
+      bottomPre: "em ",
+      highlight: "perfume",
+      bottomPost: "!",
+    },
+    statsLeft: "100% gratuito",
+    statsRight: "+10.000 membros",
+    subtitle:
+      "Receba as melhores promoções de perfumes 100% originais do Mercado Livre, direto no seu WhatsApp — de graça 🔥",
+    // TODO: clone da página de perfumes para uma terceira origem de tráfego —
+    // trocar pelo link do grupo/campanha específico desta página.
+    whatsappLink: "https://chat.whatsapp.com/J5iJyofmKxaAvZmW7T9V4f?s=cl&p=a&ilr=1",
+    accent: "#F5C400",
+    metaPixelId: "1323630969748944",
+    footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
+    trackingGroup: "grupo_50_plus",
   },
   achadinhos: {
     slug: "achadinhos",
@@ -93,6 +120,7 @@ export const sites = {
     accent: "#FF5B27",
     metaPixelId: "1323630969748944",
     footerTagline: "🛍️👍 Curadoria diária de achadinhos · 100% gratuito · Links seguros",
+    trackingGroup: "achadinhos",
   },
 } as const satisfies Record<string, SiteConfig>;
 

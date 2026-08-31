@@ -9,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LandingPage site={site} trackingGroup={site.trackingGroup} />;
+  return (
+    <LandingPage
+      site={site}
+      trackingGroup={site.trackingGroup}
+      bannerText="🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨"
+      liveStatsValues={[200, 210, 180, 190]}
+      recentJoiners={5}
+    />
+  );
 }

@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LandingPage site={site} />;
+  return <LandingPage site={site} trackingGroup={site.trackingGroup} />;
 }

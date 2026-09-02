@@ -1,5 +1,7 @@
 "use client";
 
+import { trackContact } from "@/lib/meta-pixel";
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
@@ -17,14 +19,20 @@ declare global {
 export default function WhatsappButton({
   href,
   children,
+  trackingGroup,
 }: Readonly<{
   href: string;
   children: React.ReactNode;
+  trackingGroup?: "grupo_18_31" | "grupo_31_50" | "grupo_50_plus" | "achadinhos";
 }>) {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
     window.open(href, "_blank");
-    window.fbq?.("track", "Contact");
+    if (trackingGroup) {
+      trackContact(trackingGroup);
+    } else {
+      window.fbq?.("track", "Contact");
+    }
   }
 
   return (

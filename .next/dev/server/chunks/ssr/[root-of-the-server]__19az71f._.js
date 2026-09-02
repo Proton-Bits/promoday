@@ -56,7 +56,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_18_31"
+        trackingGroup: "grupo_18_31",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            180,
+            190,
+            175,
+            185
+        ],
+        recentJoiners: 3,
+        statsInterval: 3600000
     },
     "perfumes-2": {
         slug: "perfumes-2",
@@ -79,7 +88,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_31_50"
+        trackingGroup: "grupo_31_50",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            150,
+            160,
+            140,
+            155
+        ],
+        recentJoiners: 2,
+        statsInterval: 3600000
     },
     "perfumes-3": {
         slug: "perfumes-3",
@@ -102,7 +120,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_50_plus"
+        trackingGroup: "grupo_50_plus",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            80,
+            90,
+            70,
+            85
+        ],
+        recentJoiners: 1,
+        statsInterval: 3600000
     },
     achadinhos: {
         slug: "achadinhos",
@@ -124,7 +151,16 @@ const sites = {
         accent: "#FF5B27",
         metaPixelId: "1323630969748944",
         footerTagline: "🛍️👍 Curadoria diária de achadinhos · 100% gratuito · Links seguros",
-        trackingGroup: "achadinhos"
+        trackingGroup: "achadinhos",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            200,
+            210,
+            180,
+            190
+        ],
+        recentJoiners: 5,
+        statsInterval: 3000
     }
 };
 }),

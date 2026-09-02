@@ -26,6 +26,10 @@ export type SiteConfig = {
   metaPixelId: string;
   footerTagline: string;
   trackingGroup?: "grupo_18_31" | "grupo_31_50" | "grupo_50_plus" | "achadinhos";
+  bannerText?: string;
+  liveStatsValues?: number[];
+  recentJoiners?: number;
+  statsInterval?: number;
 };
 
 export const sites = {
@@ -50,6 +54,10 @@ export const sites = {
     metaPixelId: "1323630969748944",
     footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
     trackingGroup: "grupo_18_31",
+    bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+    liveStatsValues: [180, 190, 175, 185],
+    recentJoiners: 3,
+    statsInterval: 3600000,
   },
   "perfumes-2": {
     slug: "perfumes-2",
@@ -74,6 +82,10 @@ export const sites = {
     metaPixelId: "1323630969748944",
     footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
     trackingGroup: "grupo_31_50",
+    bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+    liveStatsValues: [150, 160, 140, 155],
+    recentJoiners: 2,
+    statsInterval: 3600000,
   },
   "perfumes-3": {
     slug: "perfumes-3",
@@ -98,6 +110,10 @@ export const sites = {
     metaPixelId: "1323630969748944",
     footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
     trackingGroup: "grupo_50_plus",
+    bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+    liveStatsValues: [80, 90, 70, 85],
+    recentJoiners: 1,
+    statsInterval: 3600000,
   },
   achadinhos: {
     slug: "achadinhos",
@@ -121,6 +137,10 @@ export const sites = {
     metaPixelId: "1323630969748944",
     footerTagline: "🛍️👍 Curadoria diária de achadinhos · 100% gratuito · Links seguros",
     trackingGroup: "achadinhos",
+    bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+    liveStatsValues: [200, 210, 180, 190],
+    recentJoiners: 5,
+    statsInterval: 3000,
   },
 } as const satisfies Record<string, SiteConfig>;
 

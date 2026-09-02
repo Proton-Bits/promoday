@@ -224,7 +224,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LiveStatsCycle
 ;
 ;
 ;
-function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoiners, liveStatsValues }) {
+function LandingPage({ site, trackingGroup }) {
     const themeStyle = {
         "--accent": site.accent,
         "--accent-rgb": (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$color$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["hexToRgbTriplet"])(site.accent)
@@ -235,23 +235,23 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                 pixelId: site.metaPixelId
             }, void 0, false, {
                 fileName: "[project]/components/LandingPage.tsx",
-                lineNumber: 33,
+                lineNumber: 25,
                 columnNumber: 25
             }, this),
             trackingGroup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$PixelTracker$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 group: trackingGroup
             }, void 0, false, {
                 fileName: "[project]/components/LandingPage.tsx",
-                lineNumber: 34,
+                lineNumber: 26,
                 columnNumber: 25
             }, this),
-            bannerText && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            site.bannerText && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "banner-aviso",
                 "data-accent-color": site.accent,
-                children: bannerText
+                children: site.bannerText
             }, void 0, false, {
                 fileName: "[project]/components/LandingPage.tsx",
-                lineNumber: 37,
+                lineNumber: 29,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -267,12 +267,12 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                 className: "p"
                             }, i, false, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 45,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/LandingPage.tsx",
-                        lineNumber: 43,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -290,7 +290,7 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         priority: true
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 43,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -298,13 +298,13 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 59,
+                                        lineNumber: 51,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 50,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -312,7 +312,7 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                     site.headline.top,
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 56,
                                         columnNumber: 13
                                     }, this),
                                     site.headline.bottomPre,
@@ -320,14 +320,14 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         children: site.headline.highlight
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 58,
                                         columnNumber: 13
                                     }, this),
                                     site.headline.bottomPost
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 62,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -337,7 +337,7 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         children: site.statsLeft
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 63,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -345,91 +345,31 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         children: "·"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 64,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: site.statsRight
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 65,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 70,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this),
-                            (onlineCount !== undefined || recentJoiners !== undefined || liveStatsValues) && (liveStatsValues ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LiveStatsCycler$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                values: liveStatsValues,
-                                recentJoiners: recentJoiners ?? 5
+                            site.liveStatsValues && site.recentJoiners !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LiveStatsCycler$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                values: site.liveStatsValues,
+                                recentJoiners: site.recentJoiners,
+                                interval: site.statsInterval ?? 3600000
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 78,
-                                columnNumber: 15
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "live-stats",
-                                children: [
-                                    onlineCount !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "live-online",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "live-dot"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/LandingPage.tsx",
-                                                lineNumber: 83,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: [
-                                                    onlineCount,
-                                                    " pessoas online"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/LandingPage.tsx",
-                                                lineNumber: 84,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 82,
-                                        columnNumber: 19
-                                    }, this),
-                                    recentJoiners !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "live-recent",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "live-clock",
-                                                children: "⏱"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/LandingPage.tsx",
-                                                lineNumber: 89,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: [
-                                                    recentJoiners,
-                                                    " pessoas entraram nos últimos minutos"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/LandingPage.tsx",
-                                                lineNumber: 90,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 88,
-                                        columnNumber: 19
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 80,
-                                columnNumber: 15
-                            }, this)),
+                                lineNumber: 69,
+                                columnNumber: 13
+                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$WhatsappButton$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 href: site.whatsappLink,
                                 trackingGroup: trackingGroup,
@@ -438,7 +378,7 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                         children: "Quero entrar grátis"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -451,18 +391,18 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                             d: "M12.04 2c-5.5 0-9.96-4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.24-1.37a9.9 9.9 0 0 0 4.8 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Zm0 18.2h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.2 8.2 0 0 1-1.26-4.4c0-4.55 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.25-8.25 8.25Zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.16-.48-.28Z"
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingPage.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 79,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingPage.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 97,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -470,19 +410,19 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                 children: site.subtitle
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 104,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/LandingPage.tsx",
-                        lineNumber: 49,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/LandingPage.tsx",
-                lineNumber: 42,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -497,20 +437,20 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                                 children: "Zap"
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingPage.tsx",
-                                lineNumber: 110,
+                                lineNumber: 89,
                                 columnNumber: 16
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/LandingPage.tsx",
-                        lineNumber: 109,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: site.footerTagline
                     }, void 0, false, {
                         fileName: "[project]/components/LandingPage.tsx",
-                        lineNumber: 112,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -520,13 +460,13 @@ function LandingPage({ site, trackingGroup, bannerText, onlineCount, recentJoine
                         children: "©2026 PromoZap — Todos os direitos reservados."
                     }, void 0, false, {
                         fileName: "[project]/components/LandingPage.tsx",
-                        lineNumber: 113,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/LandingPage.tsx",
-                lineNumber: 108,
+                lineNumber: 87,
                 columnNumber: 7
             }, this)
         ]
@@ -566,7 +506,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_18_31"
+        trackingGroup: "grupo_18_31",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            180,
+            190,
+            175,
+            185
+        ],
+        recentJoiners: 3,
+        statsInterval: 3600000
     },
     "perfumes-2": {
         slug: "perfumes-2",
@@ -589,7 +538,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_31_50"
+        trackingGroup: "grupo_31_50",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            150,
+            160,
+            140,
+            155
+        ],
+        recentJoiners: 2,
+        statsInterval: 3600000
     },
     "perfumes-3": {
         slug: "perfumes-3",
@@ -612,7 +570,16 @@ const sites = {
         accent: "#F5C400",
         metaPixelId: "1323630969748944",
         footerTagline: "📦👍 Afiliado oficial Mercado Livre · 100% gratuito · Links seguros",
-        trackingGroup: "grupo_50_plus"
+        trackingGroup: "grupo_50_plus",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            80,
+            90,
+            70,
+            85
+        ],
+        recentJoiners: 1,
+        statsInterval: 3600000
     },
     achadinhos: {
         slug: "achadinhos",
@@ -634,7 +601,16 @@ const sites = {
         accent: "#FF5B27",
         metaPixelId: "1323630969748944",
         footerTagline: "🛍️👍 Curadoria diária de achadinhos · 100% gratuito · Links seguros",
-        trackingGroup: "achadinhos"
+        trackingGroup: "achadinhos",
+        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
+        liveStatsValues: [
+            200,
+            210,
+            180,
+            190
+        ],
+        recentJoiners: 5,
+        statsInterval: 3000
     }
 };
 }),
@@ -660,19 +636,11 @@ const metadata = {
 function Page() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LandingPage$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
         site: site,
-        trackingGroup: site.trackingGroup,
-        bannerText: "🚨Últimas vagas gratuitas no GRUPO PREMIUM— Entre Agora!🚨",
-        liveStatsValues: [
-            200,
-            210,
-            180,
-            190
-        ],
-        recentJoiners: 5
+        trackingGroup: site.trackingGroup
     }, void 0, false, {
         fileName: "[project]/app/achadinhos/page.tsx",
-        lineNumber: 13,
-        columnNumber: 5
+        lineNumber: 12,
+        columnNumber: 10
     }, this);
 }
 }),

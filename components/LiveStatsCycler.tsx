@@ -5,18 +5,20 @@ import { useEffect, useState } from "react";
 export default function LiveStatsCycler({
   values,
   recentJoiners,
+  interval = 3000,
 }: Readonly<{
   values: number[];
   recentJoiners: number;
+  interval?: number;
 }>) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % values.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [values]);
+    }, interval);
+    return () => clearInterval(timer);
+  }, [values, interval]);
 
   return (
     <div className="live-stats">

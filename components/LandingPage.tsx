@@ -11,17 +11,9 @@ import LiveStatsCycler from "./LiveStatsCycler";
 export default function LandingPage({
   site,
   trackingGroup,
-  bannerText,
-  onlineCount,
-  recentJoiners,
-  liveStatsValues,
 }: Readonly<{
   site: SiteConfig;
   trackingGroup?: PixelGroup;
-  bannerText?: string;
-  onlineCount?: number;
-  recentJoiners?: number;
-  liveStatsValues?: number[];
 }>) {
   const themeStyle = {
     "--accent": site.accent,
@@ -33,9 +25,9 @@ export default function LandingPage({
       {trackingGroup && <MetaPixel pixelId={site.metaPixelId} />}
       {trackingGroup && <PixelTracker group={trackingGroup} />}
 
-      {bannerText && (
+      {site.bannerText && (
         <div className="banner-aviso" data-accent-color={site.accent}>
-          {bannerText}
+          {site.bannerText}
         </div>
       )}
 
@@ -73,25 +65,12 @@ export default function LandingPage({
             <span>{site.statsRight}</span>
           </div>
 
-          {(onlineCount !== undefined || recentJoiners !== undefined || liveStatsValues) && (
-            liveStatsValues ? (
-              <LiveStatsCycler values={liveStatsValues} recentJoiners={recentJoiners ?? 5} />
-            ) : (
-              <div className="live-stats">
-                {onlineCount !== undefined && (
-                  <div className="live-online">
-                    <span className="live-dot" />
-                    <span>{onlineCount} pessoas online</span>
-                  </div>
-                )}
-                {recentJoiners !== undefined && (
-                  <div className="live-recent">
-                    <span className="live-clock">⏱</span>
-                    <span>{recentJoiners} pessoas entraram nos últimos minutos</span>
-                  </div>
-                )}
-              </div>
-            )
+          {site.liveStatsValues && site.recentJoiners !== undefined && (
+            <LiveStatsCycler
+              values={site.liveStatsValues}
+              recentJoiners={site.recentJoiners}
+              interval={site.statsInterval ?? 3600000}
+            />
           )}
 
           <WhatsappButton href={site.whatsappLink} trackingGroup={trackingGroup}>

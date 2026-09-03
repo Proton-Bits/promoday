@@ -5,6 +5,8 @@ module.exports = [
 __turbopack_context__.s([
     "trackContact",
     ()=>trackContact,
+    "trackLead",
+    ()=>trackLead,
     "trackPageView",
     ()=>trackPageView,
     "trackViewContent",
@@ -21,6 +23,11 @@ function trackViewContent(group) {
     ;
 }
 function trackContact(group) {
+    if ("TURBOPACK compile-time truthy", 1) return;
+    //TURBOPACK unreachable
+    ;
+}
+function trackLead(group) {
     if ("TURBOPACK compile-time truthy", 1) return;
     //TURBOPACK unreachable
     ;
@@ -66,8 +73,10 @@ function WhatsappButton({ href, children, trackingGroup }) {
         window.open(href, "_blank");
         if (trackingGroup) {
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackContact"])(trackingGroup);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackLead"])(trackingGroup);
         } else {
             window.fbq?.("track", "Contact");
+            window.fbq?.("track", "Lead");
         }
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -77,7 +86,7 @@ function WhatsappButton({ href, children, trackingGroup }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/components/WhatsappButton.tsx",
-        lineNumber: 39,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }

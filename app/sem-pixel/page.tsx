@@ -5,7 +5,7 @@ import { sites } from "@/lib/sites";
 import { hexToRgbTriplet } from "@/lib/color";
 import WhatsappButton from "@/components/WhatsappButton";
 
-const site = sites.perfumes;
+const site = sites["perfumes-1"];
 
 export const metadata: Metadata = {
   title: "PromoZap — Sem Pixel",

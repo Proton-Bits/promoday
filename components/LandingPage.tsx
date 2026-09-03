@@ -22,7 +22,7 @@ export default function LandingPage({
 
   return (
     <>
-      {trackingGroup && <MetaPixel pixelId={site.metaPixelId} />}
+      {trackingGroup && site.metaPixelId && <MetaPixel pixelId={site.metaPixelId} />}
       {trackingGroup && <PixelTracker group={trackingGroup} />}
 
       {site.bannerText && (

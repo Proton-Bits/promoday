@@ -1,2 +1,7 @@
 # dependencies
 /node_modules
+
+# env files (segredo da integração com promozap-admin fica aqui)
+.env*
+/.next
+.next/*

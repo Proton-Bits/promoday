@@ -20,20 +20,39 @@ export default function WhatsappButton({
   href,
   children,
   trackingGroup,
+  slug,
+  fbclid,
 }: Readonly<{
   href: string;
   children: React.ReactNode;
   trackingGroup?: "grupo_18_30" | "grupo_31_50" | "grupo_50_plus" | "achadinhos";
+  /** Slug da landing page no promozap-admin — presente, registra o clique de verdade (ver app/api/clique/[slug]). */
+  slug?: string;
+  fbclid?: string | null;
 }>) {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
     window.open(href, "_blank");
+
+    // Mesmo event_id no Pixel (aqui) e no evento server-side que o
+    // promozap-admin dispara quando a entrada no grupo é confirmada — a Meta
+    // deduplica sozinha os dois lados.
+    const eventId = crypto.randomUUID();
+
     if (trackingGroup) {
-      trackContact(trackingGroup);
-      trackLead(trackingGroup);
+      trackContact(trackingGroup, eventId);
+      trackLead(trackingGroup, eventId);
     } else {
       window.fbq?.("track", "Contact");
       window.fbq?.("track", "Lead");
+    }
+
+    // Registro do clique de verdade (LinkCurto no promozap-admin) — não
+    // bloqueia a navegação: sendBeacon é fire-and-forget, sobrevive mesmo
+    // que a aba perca o foco logo em seguida.
+    if (slug) {
+      const payload = JSON.stringify({ inviteLink: href, fbclid: fbclid ?? null, eventId });
+      navigator.sendBeacon?.(`/api/clique/${slug}`, new Blob([payload], { type: "application/json" }));
     }
   }
 

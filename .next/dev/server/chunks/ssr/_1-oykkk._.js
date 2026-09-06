@@ -22,12 +22,12 @@ function trackViewContent(group) {
     //TURBOPACK unreachable
     ;
 }
-function trackContact(group) {
+function trackContact(group, eventId) {
     if ("TURBOPACK compile-time truthy", 1) return;
     //TURBOPACK unreachable
     ;
 }
-function trackLead(group) {
+function trackLead(group, eventId) {
     if ("TURBOPACK compile-time truthy", 1) return;
     //TURBOPACK unreachable
     ;
@@ -67,16 +67,35 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__
 "use client";
 ;
 ;
-function WhatsappButton({ href, children, trackingGroup }) {
+function WhatsappButton({ href, children, trackingGroup, slug, fbclid }) {
     function handleClick(event) {
         event.preventDefault();
         window.open(href, "_blank");
+        // Mesmo event_id no Pixel (aqui) e no evento server-side que o
+        // promozap-admin dispara quando a entrada no grupo é confirmada — a Meta
+        // deduplica sozinha os dois lados.
+        const eventId = crypto.randomUUID();
         if (trackingGroup) {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackContact"])(trackingGroup);
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackLead"])(trackingGroup);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackContact"])(trackingGroup, eventId);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["trackLead"])(trackingGroup, eventId);
         } else {
             window.fbq?.("track", "Contact");
             window.fbq?.("track", "Lead");
+        }
+        // Registro do clique de verdade (LinkCurto no promozap-admin) — não
+        // bloqueia a navegação: sendBeacon é fire-and-forget, sobrevive mesmo
+        // que a aba perca o foco logo em seguida.
+        if (slug) {
+            const payload = JSON.stringify({
+                inviteLink: href,
+                fbclid: fbclid ?? null,
+                eventId
+            });
+            navigator.sendBeacon?.(`/api/clique/${slug}`, new Blob([
+                payload
+            ], {
+                type: "application/json"
+            }));
         }
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -86,7 +105,7 @@ function WhatsappButton({ href, children, trackingGroup }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/components/WhatsappButton.tsx",
-        lineNumber: 41,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 }

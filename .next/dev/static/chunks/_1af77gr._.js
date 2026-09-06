@@ -26,19 +26,23 @@ function trackViewContent(group) {
         content_category: group
     });
 }
-function trackContact(group) {
+function trackContact(group, eventId) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
     window.fbq?.("track", "Contact", {
         content_category: group
-    });
+    }, eventId ? {
+        eventID: eventId
+    } : undefined);
 }
-function trackLead(group) {
+function trackLead(group, eventId) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
     window.fbq?.("track", "Lead", {
         content_category: group
-    });
+    }, eventId ? {
+        eventID: eventId
+    } : undefined);
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
@@ -89,16 +93,35 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__
 "use client";
 ;
 ;
-function WhatsappButton({ href, children, trackingGroup }) {
+function WhatsappButton({ href, children, trackingGroup, slug, fbclid }) {
     function handleClick(event) {
         event.preventDefault();
         window.open(href, "_blank");
+        // Mesmo event_id no Pixel (aqui) e no evento server-side que o
+        // promozap-admin dispara quando a entrada no grupo é confirmada — a Meta
+        // deduplica sozinha os dois lados.
+        const eventId = crypto.randomUUID();
         if (trackingGroup) {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trackContact"])(trackingGroup);
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trackLead"])(trackingGroup);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trackContact"])(trackingGroup, eventId);
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$meta$2d$pixel$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["trackLead"])(trackingGroup, eventId);
         } else {
             window.fbq?.("track", "Contact");
             window.fbq?.("track", "Lead");
+        }
+        // Registro do clique de verdade (LinkCurto no promozap-admin) — não
+        // bloqueia a navegação: sendBeacon é fire-and-forget, sobrevive mesmo
+        // que a aba perca o foco logo em seguida.
+        if (slug) {
+            const payload = JSON.stringify({
+                inviteLink: href,
+                fbclid: fbclid ?? null,
+                eventId
+            });
+            navigator.sendBeacon?.(`/api/clique/${slug}`, new Blob([
+                payload
+            ], {
+                type: "application/json"
+            }));
         }
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -108,7 +131,7 @@ function WhatsappButton({ href, children, trackingGroup }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/components/WhatsappButton.tsx",
-        lineNumber: 41,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 }

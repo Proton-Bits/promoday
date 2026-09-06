@@ -43,11 +43,13 @@ export async function getInviteLink(slug: string): Promise<string | null> {
 
 /**
  * Monta o SiteConfig completo a partir do promozap-admin (conteúdo + link do
- * grupo resolvido na hora). Se o admin estiver fora do ar, cai pro fallback
- * estático de lib/sites.ts — a landing page não pode ficar fora do ar por
- * causa disso, é tráfego pago em cima dela.
+ * grupo resolvido na hora). `fallback` é usado só pras páginas legadas que
+ * ainda têm entrada estática em lib/sites.ts — se o admin estiver fora do ar,
+ * cai pro fallback em vez de derrubar a página (é tráfego pago em cima dela).
+ * Páginas criadas só pelo painel (sem fallback estático) devolvem null nesse
+ * cenário, e quem chama decide mostrar 404.
  */
-export async function resolverSite(slug: string, fallback: SiteConfig): Promise<SiteConfig> {
+export async function resolverSite(slug: string, fallback: SiteConfig | null = null): Promise<SiteConfig | null> {
   try {
     const [config, inviteLink] = await Promise.all([getLandingPageConfig(slug), getInviteLink(slug)]);
     if (!config || !inviteLink) return fallback;

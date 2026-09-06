@@ -1,6 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/clique/[slug]/route": "app/api/clique/[slug]/route.js",
-  "/perfumes-1/page": "app/perfumes-1/page.js",
-  "/perfumes-2/page": "app/perfumes-2/page.js"
-}
